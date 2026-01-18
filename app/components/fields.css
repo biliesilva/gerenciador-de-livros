@@ -1,0 +1,239 @@
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.field-label {
+  font-family: var(--font-family);
+  font-size: var(--body-sm-size);
+  line-height: var(--body-sm-height);
+  font-weight: var(--weight-medium);
+  color: var(--navy-dark);
+}
+
+.field-label .required {
+  color: var(--red-bright);
+  margin-left: 2px;
+}
+
+.field-input,
+.field-textarea {
+  font-family: var(--font-family);
+  font-size: var(--body-md-size);
+  font-weight: var(--weight-regular);
+  padding: 10px 20px;
+  border: 1px solid var(--gray-200);
+  border-radius: 8px;
+  background-color: var(--gray-100);
+  color: var(--navy-dark);
+  transition: all 0.2s ease-in-out;
+  outline: none;
+  resize: none;
+  width: 100%;
+}
+
+.field-input::placeholder,
+.field-textarea::placeholder {
+  color: var(--gray-400);
+}
+
+.field-input:focus,
+.field-textarea:focus {
+  border-color: var(--blue-base);
+  box-shadow: 0 0 0 3px rgba(25, 60, 184, 0.1);
+}
+
+.field-input:not(:placeholder-shown),
+.field-textarea:not(:placeholder-shown) {
+  background-color: var(--gray-100);
+  border-color: var(--gray-300);
+}
+
+.field.field-error .field-input,
+.field.field-error .field-textarea {
+  border-color: var(--red-bright);
+  background-color: rgba(212, 24, 61, 0.05);
+}
+
+.field.field-error .field-input:focus,
+.field.field-error .field-textarea:focus {
+  box-shadow: 0 0 0 3px rgba(212, 24, 61, 0.1);
+}
+
+.field-input:disabled,
+.field-textarea:disabled {
+  background-color: var(--gray-100);
+  color: var(--gray-400);
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.field-disabled .field-label {
+  color: var(--gray-400);
+}
+
+.field-disabled .rating-stars {
+  opacity: 0.5;
+}
+
+.field-disabled .field-textarea {
+  opacity: 0.5;
+}
+
+.field-textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+.field-textarea.large {
+  min-height: 120px;
+}
+
+.field-rating {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.rating-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.rating-stars {
+  display: flex;
+  gap: 4px;
+}
+
+.rating-star {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  color: var(--gray-300);
+}
+
+.rating-star:hover,
+.rating-star.hover {
+  color: var(--yellow-bright);
+  transform: scale(1.1);
+}
+
+.rating-star.filled {
+  color: var(--yellow-bright);
+}
+
+.rating-star svg {
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
+}
+
+.rating-clear {
+  font-family: var(--font-family);
+  font-size: var(--body-sm-size);
+  line-height: var(--body-sm-height);
+  font-weight: var(--weight-medium);
+  
+  background: none;
+  border: none;
+  color: var(--gray-400);
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0;
+  
+  transition: color 0.2s ease-in-out;
+}
+
+.rating-clear:hover {
+  color: var(--navy-dark);
+}
+
+.rating-clear:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.rating-value {
+  font-size: var(--body-sm-size);
+  color: var(--gray-400);
+  margin-left: 8px;
+}
+
+.field-small .field-input,
+.field-small .field-textarea {
+  padding: 8px 12px;
+  font-size: var(--body-sm-size);
+}
+
+.field-large .field-input,
+.field-large .field-textarea {
+  padding: 16px 20px;
+  font-size: var(--body-md-size);
+}
+
+.field-group {
+  display: grid;
+  gap: 16px;
+}
+
+.field-group.two-columns {
+  grid-template-columns: 1fr 1fr;
+}
+
+.field-group.three-columns {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.field-error-message {
+  font-size: var(--body-sm-size);
+  color: var(--red-bright);
+  margin-top: 4px;
+}
+
+.field-helper {
+  font-size: var(--body-sm-size);
+  color: var(--gray-400);
+  margin-top: 4px;
+}
+
+.field select.field-input,
+select.field-input {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+  padding-right: 40px;
+  cursor: pointer;
+}
+
+.field select.field-input:hover,
+select.field-input:hover {
+  border-color: var(--gray-300);
+}
+
+.field select.field-input:focus,
+select.field-input:focus {
+  border-color: var(--blue-base);
+  box-shadow: 0 0 0 3px rgba(25, 60, 184, 0.1);
+}
+
+
+.field select.field-input:disabled,
+select.field-input:disabled {
+  background-color: var(--gray-100);
+  color: var(--gray-400);
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+  .field-group.two-columns,
+  .field-group.three-columns {
+    grid-template-columns: 1fr;
+  }
+}
