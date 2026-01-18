@@ -1,0 +1,48 @@
+:root {
+  --white: #ffffff;
+  --gray-100: #f3f3f5;
+  --gray-200: #e1e1e6;
+  --gray-300: #d1d5dc;
+  --gray-400: #717182;
+  --gray-500: #0a0a0a;
+  --overlay: rgba(0, 0, 0, 0.5);
+
+  --navy-dark: #211f42;
+  --navy-low: #030213;
+
+  --yellow-bright: #fdc700;
+  --red-bright: #d4183d;
+  --yellow-base: #894b00;
+  --blue-base: #193cb8;
+  --green-base: #016630;
+  --yellow-light: #fef9c2;
+  --blue-light: #dbeafe;
+  --green-light: #dcfce7;
+
+  --font-family: 'Inter', sans-serif;
+
+  --heading-xl-size: 24px;
+  --heading-lg-size: 18px;
+  --heading-md-size: 16px;
+  --body-md-size: 16px;
+  --body-sm-size: 14px;
+  --action-size: 14px;
+  --badge-size: 12px;
+
+  --heading-xl-height: 32px;
+  --heading-lg-height: 28px;
+  --heading-md-height: 24px;
+  --body-md-height: 24px;
+  --body-sm-height: 20px;
+  --action-height: 20px;
+  --badge-height: 16px;
+
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+
+  --button-gap: 12px;
+  --button-padding-y: 8px;
+  --button-padding-x: 16px;
+  --button-border-radius: 8px;
+}
